@@ -1,6 +1,7 @@
 Link Praktikum Figma : https://www.figma.com/file/Vbj2ZsLlMcMl1LSoK07i0v/Tugas-Figma-UI-UX?node-id=0%3A1
 
 Resume Figma
+
 Figma adalah editor grafik vektor dan alat prototyping yang terutama berbasis web, dengan fitur offline tambahan yang diaktifkan oleh aplikasi desktop untuk macOS dan Windows.
 
 Keuntungan
