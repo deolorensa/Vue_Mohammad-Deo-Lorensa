@@ -2,49 +2,46 @@
 
 <head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Slabo+27px">
+  <style>
+    .huruf{
+      font-family: 'Slabo27px' serif;
+      font-size: 20px;
+      text-align: center;
+      color: white;
+      
+    }
+    .small-box {
+      width: 100px;
+      height: 100px;
+      padding: 15px;
+      margin: 50px;
+    }
+    .red {
+      background-color: red;
+    }
+    .blue {
+      background-color: blue;
+    }
+    .green {
+      background-color: green;
+      width: 350px;
+      padding: 0px 10px 10px 10px;
+      margin: 10px 50px;
+      height: 350px;
+      border-radius: 25px;
+    }
+    .flex {
+      display:flex;
+    }
+    </style> 
 </head>
 
 
 
 <body>
-<style>
-.huruf{
-font-family: 'Slabo27px' serif;
-font-size: 20px;
-text-align: center;
-color: white;
-
-}
-.red {
-background-color: red;
-width: 100px;
-height: 100px;
-padding: 15px;
-margin: 50px;
-
-}
-.blue {
-background-color: blue;
-width: 100px;
-height: 100px;
-padding: 15px;
-margin: 50px;
-}
-.green {
-background-color: green;
-width: 350px;
-padding: 0px 10px 10px 10px;
-margin: 10px 50px;
-height: 350px;
-border-radius: 25px;
-}
-.flex {
-  display:flex;
-}
-</style> 
-<div class="flex">
-  <div class="red huruf">Saya adalah box red berukuran 100 px</div>
-  <div class="blue huruf">Saya adalah box blue berukuran 100 px</div>
+  <div class="flex">
+    <div class="red small-box huruf">Saya adalah box red berukuran 100 px</div>
+    <div class="blue small-box huruf">Saya adalah box blue berukuran 100 px</div>
   </div>
   <div class="green huruf">Saya adalah box green berukuran 350 px </div>
 
