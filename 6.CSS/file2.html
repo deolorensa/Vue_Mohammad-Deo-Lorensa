@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yourlogo</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        .flex {
+            display: flex;
+        }
+        .body {
+            background-image: url('sample-pattern.png');
+        }
+        .text-body {
+            text-align: center;
+            color: #006699;
+            padding: 25px;
+        }
+        .text-main{
+            color: #3a9cdd;
+            padding-bottom: 15px;
+        }
+        .nav {
+            background-color: white;
+            height: 50px;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            padding: 15px;
+        }
+        .nav-font{
+            flex-direction: row;
+            padding: 10px;
+            font-size:15px;
+            line-height:5px;
+        }
+        .footer {
+            background-color: black;
+            height: 50px;
+            text-align: center;
+            color: azure;
+            padding: 15px;
+        }
+        .box {
+            background-color: white;
+            width: 1000px;
+            border: 10px ;
+            padding: 50px;
+            margin: auto;
+            margin-bottom: 5px;
+        }
+    </style>
+    <nav class="flex nav ">
+        <img src="sample-logo.png" width="150px" height="30px">
+        <ul style="list-style:none;" class="flex">
+            <li class="nav-font"><a href="#">Home</a></li class="">
+            <li class="nav-font"><a href="#">About</a></li class="">
+            <li class="nav-font"><a href="#">Contact</a></li class="">
+            
+        </ul>
+    </nav>
+    <main class="body">
+        <h1 class="text-body">Featured Post</h1>
+        <div class="box">
+            <h3 class="text-main">Lorem Post 1</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque quidem dolores ut corporis, laboriosam quae voluptas quaerat rerum unde, reprehenderit quasi. Consectetur quibusdam omnis mollitia consequuntur suscipit sed nihil necessitatibus!</p>
+        </div>
+        <div class="box">
+            <h3 class="text-main">Lorem Post 2</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque quidem dolores ut corporis, laboriosam quae voluptas quaerat rerum unde, reprehenderit quasi. Consectetur quibusdam omnis mollitia consequuntur suscipit sed nihil necessitatibus!</p>
+        </div>
+        <div class="box">
+            <h3 class="text-main">Lorem Post 3</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque quidem dolores ut corporis, laboriosam quae voluptas quaerat rerum unde, reprehenderit quasi. Consectetur quibusdam omnis mollitia consequuntur suscipit sed nihil necessitatibus!</p>
+        </div>
+        <div class="box">
+            <h3 class="text-main">Lorem Post 4</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque quidem dolores ut corporis, laboriosam quae voluptas quaerat rerum unde, reprehenderit quasi. Consectetur quibusdam omnis mollitia consequuntur suscipit sed nihil necessitatibus!</p>
+        </div>
+        <div class="box">
+            <h3 class="text-main">Lorem Post 5</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque quidem dolores ut corporis, laboriosam quae voluptas quaerat rerum unde, reprehenderit quasi. Consectetur quibusdam omnis mollitia consequuntur suscipit sed nihil necessitatibus!</p>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+    </main>
+    <footer class="footer">
+        <h6>copyriht © 2016 Nada Yasinta</h6>
+    </footer>
+</body>
+</html>
