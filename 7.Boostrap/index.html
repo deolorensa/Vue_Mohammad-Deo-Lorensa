@@ -7,42 +7,48 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
     <title>Praktikum Bootstrap</title>
     <style>
         * {
             font-family: "Roboto", sans-serif;
+            font-weight: 100;
         }
         .nav-p {
-            padding: 10px 300px 10px 300px !important;
-            margin-bottom: 50px;
+            padding: 0px 300px 0px 300px;
+            height: 40px;
         }
         h1 {
             font-size: 50px;
             text-align: center;
             margin-top: 50px;
+            font-weight: 100
         }
         p{
             text-align: center;
+            
         }
-        span{
-            color: green;
-        }
+        
         .nav-font{
             font-size: 20px;
+            color: rgb(60, 60, 60);
         }
         a{
             font-size: 10px;
+            font-weight: 100;
         }
         a:hover {
-            color: green;
+            color: rgb(0, 0, 0);
             background-color: gray;
             border-radius: 10px;
         }
+        .font-e {
+          color: rgb(0, 255, 0);
+        }
         .image {
             width: 50px;
-            height: 100px;
-            text-align: center;
+            height: 50px;
+            margin-bottom: 15px;
         }
         .font-main {
             font-size: 10px;
@@ -54,17 +60,32 @@
         .flex {
             display: flex;
         }
+        .box{
+          margin: 150px;
+        }
+        .footer {
+          background-color: rgb(16, 16, 16);
+          color: white;
+          padding: 25px 150px 25px 150px;
+          margin: 35px 0px 0px 0px;
+        }
+        .font-footer {
+          font-size: 10px;
+        }
+        .font-hp {
+          font-weight: 500 ;
+        }
     </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm bg-body nav-p">
         <div class="container-fluid">
-          <a class="navbar-brand nav-font" href="#"><span class="">e</span><strong>Startup</strong></a>
+          <a class="navbar-brand nav-font" href="#"><span class="font-e"><b>e</b></span>Startup</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end " id="navbarNavDropdown">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav pt-4">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
@@ -75,7 +96,7 @@
                 <a class="nav-link" href="#">Features</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Screenshots</a>
+                <a class="nav-link" href="#">Screenshots</a>`
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Team</a>
@@ -101,28 +122,34 @@
         </div>
       </nav>
       <main >
-          <div class="container g-5 ">
-            <h1>Simple Systeme Fordiscount</h1>
+          <div class="container g-5 mb-5">
+            <h1 class="fw-light" >Simple Systeme Fordiscount</h1>
             <p>Integer Cursus Bibendum Augue Ac Cursus</p>
           </div>
-          <div class="row font-main ">
+          <div class="row font-main box ">
               <div class="col-md-4">
+                <div class="flex justify-content-center">
                   <img class="image" src="cloud.svg" alt="">
-                  <p><strong>INTRODUCING WHATSAPP</strong></p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quaerat odit, consequuntur natus adipisci saepe alias, nulla accusantium</p>
-                  <p class="text-center"><a class="btn btn-Light" href="#">Read More</a></p>
+                </div>
+                <p><strong>INTRODUCING WHATSAPP</strong></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quaerat odit, consequuntur natus adipisci saepe alias, nulla accusantium</p>
+                <p class="text-center"><a class="btn btn-Light fw-light" href="#">Read More</a></p>
               </div>
               <div class="col-md-4">
+                <div class="flex justify-content-center">
                   <img class="image " src="planet.svg" alt="">
-                  <p><strong>USER FRIENDLY INTERFACE</strong></p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quaerat odit, consequuntur natus adipisci saepe alias, nulla accusantium</p>
-                  <p class="text-center"><a class="btn btn-Light" href="#">Read More</a></p>
+                </div>
+                <p><strong>USER FRIENDLY INTERFACE</strong></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quaerat odit, consequuntur natus adipisci saepe alias, nulla accusantium</p>
+                <p class="text-center"><a class="btn btn-Light fw-light" href="#">Read More</a></p>
               </div>
               <div class="col-md-4">
+                <div class="flex justify-content-center">
                   <img class="image" src="asteroid.svg" alt="">
+                </div>
                   <p><strong>BUILD THE APP EVERYONE LOVE</strong></p>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quaerat odit, consequuntur natus adipisci saepe alias, nulla accusantium</p>
-                  <p class="text-center"><a class="btn btn-Light" href="#">Read More</a></p>
+                  <p class="text-center"><a class="btn btn-Light fw-light" href="#">Read More</a></p>
               </div>
           </div>
           <div class="container">
@@ -131,14 +158,14 @@
                       <img class="phone-img" src="about-img.png" alt="">
                   </div>
                   <div class="col-md-8">
-                      <h1 class="text-start"><b>ESTARTUP UI Design Mobile</b></h1>
-                      <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci sed, commodi ducimus assumenda quis, praesentium harum, hic minus distinctio nulla perspiciatis eaque similique suscipit. Laborum fugit odio repellendus dolores.</p>
-                      <ul style="list-style:none">
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
+                      <h1 class="text-start"><span class="font-hp">ESTARTUP</span> UI Design Mobile</h1>
+                      <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae porro asperiores ipsum ut quod quos reiciendis vel fugiat, incidunt aperiam. Veritatis eos vitae voluptas deserunt nulla placeat, saepe quidem expedita!</p>
+                      <ul class="text-start" style="list-style:none">
+                          <li>> Creative Design</li>
+                          <li>> Retina Ready</li>
+                          <li>> Easy To Use</li>
+                          <li>> Unlimited Features</li>
+                          <li>> Unlimited Features</li>
                       </ul>
 
                   </div>
@@ -147,6 +174,58 @@
               
           </div>
       </main>
+      <footer>
+        <div class="footer g-3">
+          <div class="row">
+          <div class="col-4">
+            <div>
+              <p class="text-start fs-5"><strong>eStartup</strong></p>
+              <p class="text-start font-footer">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam veniam dignissimos nemo possimus nihil! Iusto error, illum dolor id repellat, omnis voluptatem unde blanditiis quas, incidunt nobis maxime nulla libero?</p>
+            </div>
+
+          </div>
+          <div class="col-2">
+            <ul type="none" class="font-footer"><strong>ABOUT US</strong>
+              <li><a class="text-light text-decoration-none" href="#">About Us</a></li>
+              <li><a class="text-light text-decoration-none" href="#">Features items</a></li>
+              <li><a class="text-light text-decoration-none" href="#">Live Streaming</a></li>
+              <li><a class="text-light text-decoration-none" href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+          <div class="col-2">
+            <ul type="none" class="font-footer"><strong>ABOUT US</strong>
+              <li><a class="text-light text-decoration-none" href="#">About Us</a></li>
+              <li><a class="text-light text-decoration-none" href="#">Features items</a></li>
+              <li><a class="text-light text-decoration-none" href="#">Live Streaming</a></li>
+              <li><a class="text-light text-decoration-none" href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+          <div class="col-2">
+            <ul type="none" class="font-footer"><strong>SUPPORT</strong>
+              <li><a class="text-light text-decoration-none" href="#">Faq</a></li>
+              <li><a class="text-light text-decoration-none" href="#">Editor Help</a></li>
+              <li><a class="text-light text-decoration-none" href="#">Contact Us</a></li>
+              <li><a class="text-light text-decoration-none" href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+          <div class="col-2">
+            <ul type="none" class="font-footer "><strong>ABOUT US</strong>
+              <li><a class="text-light text-decoration-none" href="#">About Us</a></li>
+              <li><a class="text-light text-decoration-none" href="#">Features items</a></li>
+              <li><a class="text-light text-decoration-none" href="#">Live Streaming</a></li>
+              <li><a class="text-light text-decoration-none" href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          </div>
+        </div>
+        <div class="text-center p-2 lh-1">
+          <a>© Copyrihts eStartup.All rights reserved</a></br>
+          <a>Designer by<span class="text-success">BootstrapMade</span>></a>
+        </div>
+      </footer>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
