@@ -12,3 +12,22 @@ Tugas Javascript Refreshment
 4.  ![Screenshot (327)](https://user-images.githubusercontent.com/84265981/157415271-f21c0bbb-b82a-4cbb-9519-f963b9633abb.png)
 5.  ![Screenshot (332)](https://user-images.githubusercontent.com/84265981/157415553-a2b3a0c1-bed5-4366-a0c1-3af5340b4beb.png)
 6.  ![Screenshot (333)](https://user-images.githubusercontent.com/84265981/157415651-b5fbdf1a-ea97-4fc8-8e14-d45f7c8db0ba.png)
+
+Resume Javascript Refreshment
+
+JavaScript adalah bahasa pemrograman yang paling banyak digunakan dalam pengembangan website, aplikasi, game, dan lainnya.
+JavaScript adalah bahasa pemrograman populer yang digunakan untuk membuat situs dengan konten website yang dinamis. 
+Konten dinamis artinya konten dapat bergerak atau berubah di depan layar tanpa perlu mereload halaman. Misalnya saja, fitur slideshow foto, gambar animasi, pengisian poling, dan lainnya.  
+
+JavaScript sendiri sebenarnya biasanya dikolaborasikan dengan HTML dan CSS. Di mana HTML digunakan untuk membuat struktur website dan CSS untuk merancang style halaman website. Lalu, JavaScript berperan menambahkan elemen interaktif untuk meningkatkan engagement pengguna. 
+
+Tipe data JavaScript 
+Nah, setelah mengenal variabel dalam bahasa pemrograman ini, Anda juga perlu mengenal tipe data yang akan disimpan di variabel. 
+
+Ada beberapa tipe data dalam Javascript: 
+
+String atau teks 
+Integer atau Number berupa bilangan bulat 
+Float berupa bilangan pecahan 
+Boolean berupa (true/false) 
+Object berupa semua tipe data 
