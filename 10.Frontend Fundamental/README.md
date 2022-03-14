@@ -10,4 +10,4 @@ Node.js adalah runtime environment untuk JavaScript yang bersifat open-source da
 
 npm adalah sebuah manajer paket untuk bahasa pemrograman JavaScript yang menjadi manajer baku untuk lingkungan runtime Node.js.
 
-Tugas Latihan 2 link :
+Tugas Latihan 2 link : https://github.com/deolorensa/Latihan-Alterra.git
