@@ -1,36 +1,34 @@
 <template>
-  <div>
-    <div id="app">
-        <ol>
-            <li v-for="toDo in toDos" :key="toDo">{{ toDo }}</li>
-        </ol>
-        <input type="text" v-model="newToDo">
-        <button @click="addToDo">Tambahkan</button>
-        <p v-if="showMessage">Hebat!</p>
-    </div>
-    
+  <div id="app">
+    <p v-for="(item, index) of task" v-bind:key="index">{{ index + 1 }}. {{ item }}</p>
+    <p v-if="task.length < 1">Dokumen Kosong</p>
+    <input type="text" v-model="taskBaru" @keyup.enter="submit" />
+    <button @click="submit">Tambahkan</button>
+    <p v-if="task.length >= 4">Hebat!</p>
   </div>
 </template>
-    <script>
-        const opts = {
-            el : '#app',
-            data: {
-                toDos:[],
-                newToDo:"",
-                showMessage: false
-            },
-            methods: {
-                addToDo(){
-                    this.toDos.push(this.newToDo)
-                    this.listChecker()
-                },
-                listChecker(){
-                    if(this.toDos.length > 3){
-                        this.showMessage=true
-                    } 
-                }
-            },
-            
-        }
-        var app = new Vue(opts)
-    </script>
+
+<script>
+export default {
+  name: "App",
+  data: function () {
+    return {
+      task: [],
+      taskBaru: "",
+    };
+  },
+  methods: {
+    submit() {
+      this.task.push(this.taskBaru);
+      this.taskBaru = "";
+    },
+  },
+};
+</script>
+
+<style>
+#app {
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
