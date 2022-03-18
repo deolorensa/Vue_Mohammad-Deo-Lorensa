@@ -4,7 +4,7 @@
     <p v-if="task.length < 1">Dokumen Kosong</p>
     <input type="text" v-model="taskBaru" @keyup.enter="submit" />
     <button @click="submit">Tambahkan</button>
-    <p v-if="task.length >= 4">Hebat!</p>
+    <p v-if="task.length > 3">Hebat!</p>
   </div>
 </template>
 
@@ -25,10 +25,3 @@ export default {
   },
 };
 </script>
-
-<style>
-#app {
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
