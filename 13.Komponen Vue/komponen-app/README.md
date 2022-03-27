@@ -11,7 +11,8 @@ Masalah yang timbul ketika menggunakan Props
 3. Semakin banyak kondisi/percabangan pada component
 4. Satu component menjadi mempunyai banyak tanggung jawab
 
-# new-app
+
+# komponen-app
 
 ## Project setup
 ```
