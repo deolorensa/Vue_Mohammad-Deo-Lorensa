@@ -3,6 +3,7 @@
     <header class="text-center">
       <h1 class="text-5xl font-black">Todo List</h1>
       <p class="text-xl mb-8">You Have {{ items.length }}</p>
+      <p class="text-xl mb-8" v-if="items.length > 3">Hebat !</p>
     </header>
     <main class="mt-3">
       <label for="">
