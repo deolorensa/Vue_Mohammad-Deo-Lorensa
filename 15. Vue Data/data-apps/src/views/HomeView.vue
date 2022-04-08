@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="container">
-    <div class="box" v-for="(news,index) in listNews" :key="index">
+    <div class="box" v-for="(news,index) in newsList" :key="index" @click="redirectToAbout">
       <div class="box-img"> <img :src="`${news.urlToImage}`" alt="">
       </div>
         <div class="flex-col">
@@ -19,12 +19,17 @@
 export default {
   name: 'HomeView',
   computed: {
-    listNews() {
+    newsList() {
       return this.$store.state.newsList
     }
   },
   mounted() {
     this.$store.dispatch('fetchNews')
+  },
+  methods: {
+    redirectToAbout() {
+      this.$router.push({ name: "AboutView", params: {id: this.id}});
+    }
   }
 }
 </script>
