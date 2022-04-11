@@ -1,34 +1,31 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import axios from 'axios'
+import Vue from "vue";
+import Vuex from "vuex"
+
+import createPersistedState from "vuex-persistedstate"
 
 Vue.use(Vuex)
 
+const persistedDataState = createPersistedState()
+
 export default new Vuex.Store({
-  state: {
-    newsList: [],
-    info: '',
-  },
-  getters: {
-  },
-  mutations: {
-    setNewsList(state, param) {
-      state.newsList = param;
+    plugins: [persistedDataState],
+    state: {
+        todos: []
     },
-    setInfo(state, param) {
-      state.info = param;
+    mutations: {
+        addTodo(state, param) {
+            state.todos.push(param)
+        },
+        editDescription(state, param) {
+            const { id, description } = param
+            state.todos[id].description = description
+        },
+        deleteTodo(state, param) {
+            state.todos.splice(param, 1)
+        },
+        editTitle(state, param) {
+            const { id, title} = param
+            state.todos[id].list = title
+        }
     }
-  },
-  actions: {
-    fetchNews(store){
-      axios
-          .get('https://newsapi.org/v2/everything?q=tesla&from=2022-03-07&sortBy=publishedAt&apiKey=fb2d9c0307bc40cf8233f4cee65c9734')
-          .then((response) => {store.commit('setNewsList', response.data.articles);
-        })
-          .catch((error) => { store.commit("setInfo", error)
-        })
-    },
-  },
-  modules: {
-  }
 })

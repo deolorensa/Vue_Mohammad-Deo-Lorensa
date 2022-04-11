@@ -1,27 +1,39 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Home from "@/views/Home";
+import About from "@/views/About";
+import Description from "@/views/Description";
+import DefaultLayout from "@/layout/DefaultLayout";
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about/:id',
-    name: 'about',
-    component: AboutView
-  },
-]
-
+    {
+        path: "/",
+        component: DefaultLayout,
+        children: [
+            {
+                path: "",
+                name: "Home",
+                component: Home,
+            },
+            {
+                path: "/about",
+                name: "About",
+                component: About,
+            },
+            {
+                path: "/description/:id",
+                name: "Description",
+                component: Description,
+            }
+        ]
+    }
+];
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
-})
+    mode: "history",
+    base: process.env.BASE_URL,
+    routes,
+});
 
-export default router
+export default router;
