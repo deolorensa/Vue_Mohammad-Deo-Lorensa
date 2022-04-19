@@ -1,4 +1,5 @@
 Link Deploy Praktikum = https://brilliant-unicorn-9d2696.netlify.app/
+API untuk tugas deploy engga menggunakan news API karena APInya engga bisa buat deploy
 
 Resume Work Together With Product - Backend and Devops
 
