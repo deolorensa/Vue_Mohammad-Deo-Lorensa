@@ -1,0 +1,122 @@
+// query memanggil data yang memiliki status true
+query MyQuery {
+    keterangan(where: {status: {_eq: true}}) {
+      id
+      id_anggota
+      pelajaran
+      status
+    }
+  }
+// Hasil
+{
+    "data": {
+      "keterangan": [
+        {
+          "id": 1,
+          "id_anggota": 1,
+          "pelajaran": "sistem informasi",
+          "status": true
+        },
+        {
+          "id": 3,
+          "id_anggota": 2,
+          "pelajaran": "sistem informasi",
+          "status": true
+        }
+      ]
+    }
+  }
+// query menambahkan data keterangan
+  mutation MyMutation($objects: [keterangan_insert_input!] = {}) {
+    insert_keterangan(objects: $objects) {
+      returning {
+        status
+        pelajaran
+        nilai
+        id_anggota
+        id
+      }
+    }
+  }
+// query variable
+  {
+    "objects": [
+      {
+      "id_anggota": 3,
+      "pelajaran": "sistem informasi",
+      "status": true,
+      "nilai": 90
+      },
+      {
+      "id_anggota": 3,
+      "pelajaran": "react",
+      "status": false,
+      "nilai": 55
+      }
+    ]
+  }
+// hasil menambahkan data
+  {
+    "data": {
+      "insert_keterangan": {
+        "returning": [
+          {
+            "status": true,
+            "pelajaran": "sistem informasi",
+            "nilai": 90,
+            "id_anggota": 3,
+            "id": 5
+          },
+          {
+            "status": false,
+            "pelajaran": "react",
+            "nilai": 55,
+            "id_anggota": 3,
+            "id": 6
+          }
+        ]
+      }
+    }
+  }
+  // mengubah status : false => true
+  mutation MyMutation {
+    update_keterangan(where: {status: {_eq: false}}, _set: {status: true}) {
+      returning {
+        status
+        pelajaran
+        nilai
+        id_anggota
+        id
+      }
+    }
+  }
+// hasil
+  {
+    "data": {
+      "update_keterangan": {
+        "returning": [
+          {
+            "status": true,
+            "pelajaran": "react",
+            "nilai": 65,
+            "id_anggota": 1,
+            "id": 2
+          },
+          {
+            "status": true,
+            "pelajaran": "react",
+            "nilai": 50,
+            "id_anggota": 2,
+            "id": 4
+          },
+          {
+            "status": true,
+            "pelajaran": "react",
+            "nilai": 55,
+            "id_anggota": 3,
+            "id": 6
+          }
+        ]
+      }
+    }
+  }
